@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{{token.img.url}}" width="300" height="300">
+        </div>
+<div class="col-md-6">
+    <h1>{{token.name}}</h1><br>
+    {{token.des}}
+    {{token.year}}<br>
+    <a class="btn btn-warning" href="{% url 'movieapp:update' token.id %}">update</a>
+    <a class="btn btn-danger" href="{% url 'movieapp:delete' token.id %}">delete</a>
+</div>
+    </div>
+</div>
+{% endblock %}
+
